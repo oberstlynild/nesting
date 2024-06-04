@@ -1,0 +1,62 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 150px;
+}
+
+.dice {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    transform-style: preserve-3d;
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+.face {
+    background: skyblue;
+    border: 1px solid #333;
+    position: absolute;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.cell {
+    height: 100px;
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dot {
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    background-color: white;
+}
+
+.face.six {
+    transform: translateZ(150px);
+}
+
+.face.one {
+    transform: translateZ(-150px);
+}
+
+.face.five {
+    transform: translateX(150px) rotateY(-90deg);
+}
+
+.face.two {
+    transform: translateX(-150px) rotateY(-90deg);
+}
+
+.face.four {
+    transform: translateY(-150px) rotateX(90deg);
+}
+
+.face.three {
+    transform: translateY(150px) rotateX(-90deg);
+}
